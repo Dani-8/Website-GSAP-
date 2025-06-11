@@ -17,11 +17,11 @@ gsap.from(split.chars, {
 
 
 gsap.from(".sec-video", {
-    scale: 0.5,
+    scale: 0.4,
     duration: 5,    
     scrollTrigger: {
         trigger: ".video",
-        start: "top 60%",
+        start: "top 80%",
         end: "top 10%",
         scrub: 2,
         markers: true,
