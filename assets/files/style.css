@@ -170,23 +170,6 @@ body{
     transform: scale(.95);
     transition: all 0.3s ease-in-out;
 }
-.card-img img{
-    object-fit: contain;
-    width: 100%;
-}
-.card-img{
-    /* background-color: black; */
-    width: 100%;
-    height: 80%;
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
-}
-
-.card-img:hover{
-    transform: scale(.95);
-    transition: all 0.3s ease-in-out;
-}
-
 .thr-video{
     width: 100%;
     height: 100%;
@@ -198,6 +181,32 @@ body{
     transform: scale(1.15);
 
 }
+
+
+
+.card-img{
+    /* background-color: black; */
+    width: 100%;
+    height: 80%;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+.card-img img{
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+.card-img:hover{
+    transform: scale(.95);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-img:hover img{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.15);
+
+}
+
 
 
 .card-text{
