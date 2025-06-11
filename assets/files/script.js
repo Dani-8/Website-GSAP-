@@ -1,0 +1,73 @@
+gsap.registerPlugin(SplitText);
+
+gsap.set("#heading", { opacity: 1 });
+
+let split = SplitText.create("#heading", { type: "chars" });
+//now animate each character into place from 20px below, fading in:
+gsap.from(split.chars, {
+    duration: 1,
+    delay: 1,
+    y: 20,
+    autoAlpha: 0,
+    stagger: 0.05
+});
+
+
+
+
+
+gsap.from(".sec-video", {
+    scale: 0.5,
+    duration: 5,    
+    scrollTrigger: {
+        trigger: ".video",
+        start: "top 60%",
+        end: "top 10%",
+        scrub: 2,
+        markers: true,
+    }
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
