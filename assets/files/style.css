@@ -282,43 +282,6 @@ body{
 
 
 
-/* 
-
-.last-thr-sec-text{
-    border: 2px solid rgb(248, 220, 136);
-    border-radius: 50%;
-    margin-top: 100px;
-    width: 380px;
-    height: 140px;
-    color: rgb(248, 220, 136);
-    padding: 25px 40px;
-    font-size: 25px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    transition: .2s linear;
-}
-
-.last-thr-sec-text:hover{
-    transform: rotate(-20deg);
-    width: 400px;
-    height:170px;
-
-}
-
-.last-thr-sec-text p{
-    transform: rotate(0deg ) !important;
-
-}
- */
-
-
-
-
-
 
 .last-thr-sec-text {
     position: relative;
@@ -357,3 +320,116 @@ body{
     width: 380px;
     /* height: 170px; */
 }
+
+
+
+
+
+.fourth{
+    /* height: 100vh; */
+    width: 100%;
+    background-color: rgb(225, 245, 99);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+.pg-heading{
+    width: 100%;
+    /* height: 100%; */
+    background-color: rgb(17, 123, 158);
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pg-heading h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 45vw;
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

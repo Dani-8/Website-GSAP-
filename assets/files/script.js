@@ -36,8 +36,21 @@ gsap.from(".sec-video", {
 
 
 
+gsap.to(".fourth h1", {
+    transform: "translatex(-600%)",
+    scrollTrigger: {
+        trigger: ".pg-heading",
+        scroller: "body",
+        markers: true,
+        start: "top 0%",
+        end: "top -100%",
+        scrub: 2,
+        pin: true,
+        // pinSpacing: false
+}
 
 
+})
 
 
 
