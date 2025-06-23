@@ -343,8 +343,9 @@ body{
 }
 
 .pg-heading h1{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 45vw;
+    
+    font-family: 'Sifonn', sans-serif;  
+    font-size: 40vw;
     width: 100%;
 
 }
