@@ -59,7 +59,16 @@ gsap.to(".fourth h1", {
 
 
 
-
+gsap.to(".tag-img", {
+    xPercent: -100, // Move images left
+    scrollTrigger: {
+        trigger: ".fourth",
+        scroller: "body",
+        start: "top 0%",
+        end: "top -100%",
+        scrub: 2,
+    }
+});
 
 
 

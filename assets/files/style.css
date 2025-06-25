@@ -348,7 +348,7 @@ body{
     /* height: 100%; */
     background-color: rgb(18, 135, 174);
     overflow-x: hidden;
-    
+    position: relative;
 
 }
 
@@ -360,7 +360,13 @@ body{
 
 }
 
-
+.pg-heading img {
+    position: absolute;
+    top: 30%;
+    width: 250px;
+    height: 250px;
+    margin-left: 50px
+}
 
 
 
