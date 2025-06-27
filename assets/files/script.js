@@ -58,44 +58,54 @@ gsap.to(".fourth h1", {
 
 
 
+// gsap.to(".pg-heading", {
+//     xPercent: -80,
+//     scrollTrigger: {
+//         trigger: ".fourth",
+//         scroller: "body",
+//         markers: true,
+//         start: "left 0%",
+//         // end: "top -100%",
+//         scrub: 2,
+//         pin: true,
+//     }
+// });
 
-
-
-
-// Image visibility tied to letter positions
 gsap.to(".one", {
-    opacity: 1,
+    scale: 2,
+    rotation: 360,
     scrollTrigger: {
-        trigger: ".fourth",
-        scroller: "body",
-        start: "top 0%", // Show when 'X' is visible
-        end: "top -20%", // Hide when 'X' moves out
+        trigger: ".one",
+        containerAnimation: gsap.to(".one", { xPercent: 40 }),
+        start: "left 30%",
+        end: "left 30%",
         scrub: 2,
     }
 });
 
 gsap.to(".two", {
-    opacity: 1,
+    scale: 2,
+    rotation: 360,
     scrollTrigger: {
-        trigger: ".fourth",
-        scroller: "body",
-        start: "top -30%", // Show when 'R-T' is visible
-        end: "top -50%", // Hide when 'R-T' moves out
+        trigger: ".two",
+        // containerAnimation: gsap.to(".fourth", { xPercent: -50 }),
+        start: "left 50%",
+        end: "left 30%",
         scrub: 2,
     }
 });
 
 gsap.to(".thr", {
-    opacity: 1,
+    scale: 2,
+    rotation: 360,
     scrollTrigger: {
-        trigger: ".box1",
-        start: "left 70%",
-        end: "left 30%",
-        horizontal: true,
-        scrub: true
+        trigger: ".thr",
+        // containerAnimation: gsap.to(".fourth", { xPercent: -80 }),
+        start: "left 80%",
+        end: "left 20%",
+        scrub: 2,
     }
 });
-
 
 
 
