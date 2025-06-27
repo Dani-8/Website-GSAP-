@@ -37,7 +37,7 @@ gsap.from(".sec-video", {
 
 
 gsap.to(".fourth h1", {
-    transform: "translatex(-180%)",
+    xPercent: -180,
     scrollTrigger: {
         trigger: ".fourth",
         scroller: "body",
@@ -45,10 +45,8 @@ gsap.to(".fourth h1", {
         start: "top 0%",
         end: "top -100%",
         scrub: 2,
-        pin: true,
+        pin: true
 }
-
-
 })
 
 
@@ -56,19 +54,6 @@ gsap.to(".fourth h1", {
 
 
 
-
-
-
-gsap.to(".tag-img", {
-    xPercent: -100, // Move images left
-    scrollTrigger: {
-        trigger: ".fourth",
-        scroller: "body",
-        start: "top 0%",
-        end: "top -100%",
-        scrub: 2,
-    }
-});
 
 
 
