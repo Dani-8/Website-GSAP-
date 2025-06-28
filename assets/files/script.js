@@ -32,141 +32,133 @@ gsap.from(".sec-video", {
 
 
 
-
-
-
-
-gsap.to(".fourth h1", {
-    xPercent: -180,
-    scrollTrigger: {
-        trigger: ".fourth",
-        scroller: "body",
-        markers: true,
-        start: "top 0%",
-        end: "top -100%",
-        scrub: 2,
-        pin: true
-}
-})
-
-
-
-
-
 gsap.registerPlugin(ScrollTrigger);
 
-// const scrollTween = gsap.to(".fourth img", {
-//     xPercent: 100,
-//     x: () => window.innerWidth,
+
+
+
+// gsap.to(".fourth h1", {
+//     xPercent: -450,
+//     scrollTrigger: {
+//         trigger: ".fourth",
+//         scroller: "body",
+//         markers: true,
+//         start: "top 0%",
+//         end: "top -100%",
+//         scrub: 2,
+//         pin: true
+// }
+// })
+
+// ScrollTrigger.create({
+//         trigger: ".fourth",
+//         // scroller: "body",
+//         markers: true,
+//         start: "top top",
+//         end: "top -100%",
+//         scrub: 1,
+//         pin: true,
+
+//         onUpdate: (self) => {
+//         gsap.to(".fourth h1, .fourth img", {
+//                 x: `${-220 * self.progress}vw`,
+//                 // xPercent: -150,
+//                 ease: "power3.inOut",
+//                 duration: 2,
+//             })
+//         }
+// })
+
+
+
+
+
+gsap.to(".scroll-content", {
+  xPercent: -450,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".fourth",
+    start: "top top",
+    end: "top -100%",
+    scrub: 1,
+    pin: true,
+    markers: true
+  }
+});
+
+
+
+
+
+
+
+
+// gsap.to(".fourth h1, .fourth img", {
+//     xPercent: -450,
 //     ease: "none",
 //     scrollTrigger: {
 //         trigger: ".fourth",
-//         // pin: ".fourth",
-//         start: "left left",
-//         // end: () => `+=${document.querySelector(".fourth").offsetWidth} bottom`,
+//         scroller: "body",
+//         markers: true,
+//         start: "top 0%",
+//         end: "top -100%",
+//         scrub: 2,
+//         pin: true,
+//     }
+// });
+
+
+
+
+// const scrollTween = gsap.to(".pg-heading img", {
+//     xPercent: -100,
+//     x: () => -window.innerWidth,
+//     ease: "power3.inOut",
+//     scrollTrigger: {
+//         trigger: ".fourth",
+//         start: "top 0%",
+//         end: "top -100%",
+//         // start: "left left",
+//         // end: () => `+=${document.querySelector(".pg-heading").offsetWidth} right`,
 //         scrub: 1,
 //         markers: true,
 //     }
 // });
 
-// gsap.to(".one", {
-//     scale: 2,
-//     rotation: 360,
+
+
+// gsap.from(".one", {
 //     scrollTrigger: {
 //         trigger: ".one",
 //         containerAnimation: scrollTween,
-//         start: "right 40%",
-//         end: "right 0%",
-//         scrub: 1,
+//         start: "left 20%",
+//         end: "left 30%",
+//         // scrub: 1,
 //         markers: true,
 //     }
 // });
 
 // gsap.to(".two", {
-//     scale: 2,
-//     rotation: 360,
 //     scrollTrigger: {
 //         trigger: ".two",
 //         containerAnimation: scrollTween,
-//         start: "right 50%",
+//         start: "right 20%",
 //         end: "right 70%",
-//         scrub: 1,
+//         // scrub: 1,
 //         markers: true,
 //     }
 // });
 
 // gsap.to(".thr", {
-//     scale: 2,
-//     rotation: 360,
 //     scrollTrigger: {
 //         trigger: ".thr",
-//         containerAnimation: scrollTween,
-//         start: "right 80%",
-//         end: "right 100%",
-//         scrub: 1,
+//         // containerAnimation: scrollTween,
+//         // start: "right 60%",
+//         // end: "right 80%",
+//         // scrub: 1,
 //         markers: true,
 //     }
 // });
-
-
-
-
-gsap.registerPlugin(ScrollTrigger);
-
-const scrollTween = gsap.to(".fourth img", {
-    xPercent: -80,
-    x: () => window.innerWidth,
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".fourth",
-        pin: ".fourth",
-        start: "left left",
-        end: () => `+=${document.querySelector(".fourth").offsetWidth} bottom`,
-        scrub: 1,
-        markers: true,
-    }
-});
-
-gsap.to(".one", {
-    scale: 2,
-    rotation: 360,
-    scrollTrigger: {
-        trigger: ".one",
-        containerAnimation: scrollTween,
-        start: "rgith 80%",
-        end: "left 20%",
-        scrub: 1,
-        markers: true,
-    }
-});
-
-gsap.to(".two", {
-    scale: 2,
-    rotation: 360,
-    scrollTrigger: {
-        trigger: ".two",
-        containerAnimation: scrollTween,
-        start: "left 80%",
-        end: "left 20%",
-        scrub: 1,
-        markers: true,
-    }
-});
-
-gsap.to(".thr", {
-    scale: 2,
-    rotation: 360,
-    scrollTrigger: {
-        trigger: ".thr",
-        containerAnimation: scrollTween,
-        start: "left 80%",
-        end: "left 20%",
-        scrub: 1,
-        markers: true,
-    }
-});
-
-
 
 
 

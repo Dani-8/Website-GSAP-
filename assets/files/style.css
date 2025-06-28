@@ -350,11 +350,11 @@ body{
     overflow: hidden;
     /* overflow-x: hidden; */
     position: relative;
-
+    padding-left: 50%;
 }
 
 .pg-heading h1{
-    
+    /* margin-left: 50%; */
     font-family: 'Sifonn', sans-serif;  
     font-size: 40vw;
     width: 100%;
@@ -364,8 +364,8 @@ body{
 .pg-heading img {
     position: absolute;
     top: 30%;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
 }
 
 .one{
@@ -388,14 +388,14 @@ body{
 .pg-heading img {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     z-index: 10;
 }
 
 
-.one { left: 2%; } /* On 'X' */
-.two { left: calc(2% + 28vw); } /* Between 'R' and 'T' */
-.thr { left: calc(2% + 68vw); } /* Between 'S' and 'E' */
+.one { left: 80%; } /* On 'X' */
+.two { left: 180%; } /* Between 'R' and 'T' */
+.thr { left: 350%; } /* Between 'S' and 'E' */
 
 
 
