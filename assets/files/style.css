@@ -79,6 +79,7 @@ body{
 .big-heading h1{    
     color: rgb(248, 220, 136);
     font-size: 40vw;
+    opacity: 0;
     /* background-color: lightblue; */
     text-align: center;
     font-family: 'NCL Broesq', sans-serif;
@@ -363,40 +364,32 @@ body{
 
 .pg-heading img {
     position: absolute;
-    top: 30%;
-    width: 150px;
-    height: 150px;
+    /* top: 30%; */
+    width: 240px;
+    height: 220px;
 }
 
 .one{
     position: absolute;
-    left: 10%;
+    top: 60%;
+    left: 30%;
 }
 
 .two{
     position: absolute;
-    left: 40%;
+    top: 5%;
+    left: 240%;
+    transform: rotate(-10deg);
+    /* transform: rotateX(120deg); */
 }
 
 
 .thr{
     position: absolute;
-    left: 60%;
+    top: 60%;
+    left: 400%;
+    transform: rotate(10deg);
 }
-
-
-.pg-heading img {
-    position: absolute;
-    top: 50%;
-    /* transform: translateY(-50%); */
-    z-index: 10;
-}
-
-
-.one { left: 80%; } /* On 'X' */
-.two { left: 180%; } /* Between 'R' and 'T' */
-.thr { left: 350%; } /* Between 'S' and 'E' */
-
 
 
 
