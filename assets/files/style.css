@@ -354,7 +354,16 @@ body{
     padding-left: 50%;
 }
 
-.pg-heading h1{
+
+
+
+.scroll-content {
+    width: 150vw; /* or more based on your heading size */
+    display: flex;
+    align-items: center;
+}
+
+.scroll-content h1{
     /* margin-left: 50%; */
     font-family: 'Sifonn', sans-serif;  
     font-size: 40vw;
@@ -362,12 +371,15 @@ body{
 
 }
 
-.pg-heading img {
+.scroll-content img {
     position: absolute;
     /* top: 30%; */
     width: 240px;
     height: 220px;
 }
+
+
+
 
 .one{
     position: absolute;
@@ -378,7 +390,7 @@ body{
 .two{
     position: absolute;
     top: 5%;
-    left: 240%;
+    left: 80%;
     transform: rotate(-10deg);
     /* transform: rotateX(120deg); */
 }
@@ -387,7 +399,7 @@ body{
 .thr{
     position: absolute;
     top: 60%;
-    left: 400%;
+    left: 130%;
     transform: rotate(10deg);
 }
 

@@ -74,7 +74,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 gsap.to(".scroll-content", {
-    xPercent: -450,
+    xPercent: -150,
     ease: "none",
         scrollTrigger: {
         trigger: ".fourth",
@@ -89,37 +89,18 @@ gsap.to(".scroll-content", {
 
 
 
-
-
-gsap.to(".scroll-content img", {
-    xPercent: -150, // subtle movement
+gsap.utils.toArray(".scroll-content img").forEach((img, i) => {
+    gsap.to(img, {
+    xPercent: -(100 + i * 30), // each image moves slower/faster
     ease: "power1.out",
     scrollTrigger: {
         trigger: ".fourth",
-        start: "top",
+        start: "top top",
         end: "top -100%",
         scrub: 1,
-        markers: true,
-        }
+    }
+    });
 });
-
-
-
-
-// const scrollTween = gsap.to(".pg-heading img", {
-//     xPercent: -100,
-//     x: () => -window.innerWidth,
-//     ease: "power3.inOut",
-//     scrollTrigger: {
-//         trigger: ".fourth",
-//         start: "top 0%",
-//         end: "top -100%",
-//         // start: "left left",
-//         // end: () => `+=${document.querySelector(".pg-heading").offsetWidth} right`,
-//         scrub: 1,
-//         markers: true,
-//     }
-// });
 
 
 
