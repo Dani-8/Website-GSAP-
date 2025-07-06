@@ -123,6 +123,8 @@ body{
 }
 .heading h4{
     color: rgb(231, 208, 177);
+    /* overflow: hidden; */
+    background-color: red;
     font-size: 50px;
     font-weight: 400;
     text-align: center;
@@ -169,6 +171,8 @@ body{
     line-height: 170px;
     margin-top: 20px;
     place-self: center;
+    /* overflow: hidden; */
+    background-color: red;
 }
 .sec-text span{
     font-family: serif;

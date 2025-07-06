@@ -30,6 +30,8 @@ document.addEventListener("mousemove", function(dets){
     })
 })
 
+animateTextLines('.heading h4');
+
 
 // Register GSAP plugins
         gsap.registerPlugin(ScrollTrigger);
@@ -98,7 +100,7 @@ document.addEventListener("mousemove", function(dets){
                 // Set the initial state of each individual line:
                 // y: '100%' means move it down by 100% of its own height
                 // opacity: 0 means make it completely transparent
-                gsap.set(line, { y: '100%', opacity: 0 });
+                gsap.set(line, { y: '60%', opacity: 0, overflow: 'hidden'});
 
                 // Create the animation for this specific line
                 gsap.to(line, {
