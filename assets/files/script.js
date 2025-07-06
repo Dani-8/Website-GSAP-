@@ -198,29 +198,21 @@ cards.forEach((card, index) => {
         }
     });
 
-    // 1. Animate the card itself (fade in, slide up, and subtle side movement/rotation)
-    tl.to(card, {
-        opacity: 1,
-        y: 0,
-        x: (index % 2 === 0 ? 0 : 0), // Start with no x movement, animate from initial x
-        rotationY: (index % 2 === 0 ? 0 : 0), // Start with no rotation, animate from initial rotation
-        duration: 0.8,
-        ease: 'power3.out'
-    });
 
-    // 2. Animate the media (image or video) - scale in
+    // 1. Animate the media (image or video) - scale in
     tl.fromTo(media, 
         { opacity: 0, scale: 0.5 }, // Initial state for media
         { opacity: 1, scale: 1, duration: 0.5, ease: 'power3.out' },
-        // "<" // Start this tween at the same time as the previous one (card animation)
+        "<" // Start this tween at the same time as the previous one (card animation)
     );
 
-    // 3. Animate the text (fade in and slide up)
+    // 2. Animate the text (fade in and slide up)
     tl.from(text, {
         opacity: 0,
+        delay: .5,
         y: 100,
         duration: 0.6,
-        ease: 'power2.out'
+        ease: 'back.out',
     }); // Start text animation 0.3 seconds before media animation ends (overlap)
 
 });

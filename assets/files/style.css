@@ -222,7 +222,8 @@ body{
     width: 700px;
     height: 550px;
     margin: 30px 50px;
-    /* background-color: rgb(231, 208, 177); */
+    overflow: hidden;
+    /* background-color: rgb(171, 122, 204); */
 
 }
 .card-video{
