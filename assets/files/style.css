@@ -629,6 +629,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 13px;
 }
 .footer ul a{
     text-decoration: none;
@@ -644,6 +645,8 @@ body{
 .footer ul li span{
     color: rgb(231, 208, 177);
     letter-spacing: 5px;
+    font-size: 17px;
+
 }
 
 .footer ul li:hover{

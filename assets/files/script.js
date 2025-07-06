@@ -105,9 +105,8 @@ gsap.from(".sec-video", {
         start: "top 50%",
         end: "top 10%",
         scrub: 2,
-        markers: true,
+        // markers: true,
     }
-
 
 })
 
@@ -154,7 +153,7 @@ function animateTextLines(targetSelector) {
             y: '0%',         // Animate back to their original Y position
             opacity: 1,      // Animate to full opacity
             // stagger: 0.05,   // Each word animates 0.05 seconds after the previous one
-            stagger: { each: 0.2, from: 'random' },
+            stagger: { each: 0.3, from: 'random' },
 
             duration: 0.6,   // Duration for each individual word's animation
             ease: 'power3.out', // A smooth easing function
@@ -165,7 +164,7 @@ function animateTextLines(targetSelector) {
                 start: 'top 70%',        // Animation starts when the top of the line hits 90% from the top of the viewport
                 end: 'bottom 10%',       // Animation completes when the bottom of the line hits 10% from the top of the viewport
                 toggleActions: 'play none none none', // Play the animation once when triggered
-                markers: true, // Uncomment for debugging to see each line's ScrollTrigger
+                // markers: true, // Uncomment for debugging to see each line's ScrollTrigger
             }
         });
     });
@@ -207,7 +206,7 @@ cards.forEach((card, index) => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: card,
-            markers: true,
+            // markers: true,
             start: 'top 60%', // Animation starts when the top of the card hits 80% from the viewport top
             end: 'bottom 20%', // Animation completes when the bottom of the card hits 20% from the viewport top
             toggleActions: 'play none none none', // Play once on enter
@@ -258,7 +257,7 @@ gsap.to(".scroll-content", {
         end: "top -100%",
         scrub: 1,
         pin: true,
-        markers: true
+        // markers: true
     }
 });
 gsap.utils.toArray(".scroll-content img").forEach((img, i) => {
@@ -296,7 +295,7 @@ gsap.from('.row img', {
     scrollTrigger: {
         trigger: '.grid',
         start: 'top 80%',
-        markers: true,
+        // markers: true,
     }
 });
 
