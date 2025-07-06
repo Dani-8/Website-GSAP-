@@ -113,6 +113,7 @@ body{
     /* color: rgb(231, 208, 177); */
     color: rgb(228, 208, 147);
     font-size: 40vw;
+    overflow: hidden;
     opacity: 0;
     /* background-color: lightblue; */
     text-align: center;
@@ -124,7 +125,7 @@ body{
 .heading h4{
     color: rgb(231, 208, 177);
     /* overflow: hidden; */
-    background-color: red;
+    /* background-color: red; */
     font-size: 50px;
     font-weight: 400;
     text-align: center;
@@ -172,7 +173,7 @@ body{
     margin-top: 20px;
     place-self: center;
     /* overflow: hidden; */
-    background-color: red;
+    /* background-color: red; */
 }
 .sec-text span{
     font-family: serif;
