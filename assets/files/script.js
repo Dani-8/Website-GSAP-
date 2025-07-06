@@ -20,7 +20,7 @@ document.addEventListener("mousemove", function(dets){
         y:dets.y,
         scale: scale,
         opacity: opacity,
-        duration:0.6,
+        duration:0.8,
         ease: "back.out"
         
 
