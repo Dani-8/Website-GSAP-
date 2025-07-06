@@ -9,6 +9,36 @@ body{
     overflow-x: hidden;
     background-color: rgb(16, 16, 16);
 }
+.cursor {
+    z-index: 1000;
+    opacity: 0;
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(16, 16, 16);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: scale 0.3s ease;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 20px;  */
+}
+.cursor i {
+    font-size: 10px;
+    color: rgb(231, 208, 177);
+    transition: scale 0.3s ease;
+    font-weight: 400;
+
+}
+
+
+
+
+
+
 .nav{
     /* background-color: black; */
     width: 100%;
@@ -454,8 +484,8 @@ body{
 
 .row img {
     /* background-color: rgb(23, 73, 23); */
-  width: 130px;
-  height: 50px;
+    width: 130px;
+    height: 50px;
   /* object-fit: cover; */
 }
 
