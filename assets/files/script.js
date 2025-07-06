@@ -32,6 +32,36 @@ document.addEventListener("mousemove", function(dets){
 
 
 
+  // Initialize Lenis
+        const lenis = new Lenis({
+            duration: 2, // How long the scroll animation takes (in seconds)
+            easing: (t) => Math.min(1, 1 - Math.pow(1 - t, 4)), // Custom easing function
+            direction: 'vertical', // vertical, horizontal
+            gestureDirection: 'vertical', // vertical, horizontal, both
+            smoothWheel: true, // Enable smooth scrolling for mouse wheel
+            smoothTouch: false, // Disable smooth scrolling for touch devices (often preferred for native feel)
+            touchMultiplier: 2, // How much to multiply touch scroll speed
+        });
+
+        // Function to run on each animation frame to update Lenis
+        function raf(time) {
+            lenis.raf(time); // Update Lenis with the current time
+            requestAnimationFrame(raf); // Request the next animation frame
+        }
+
+        // Start the animation loop
+        requestAnimationFrame(raf);
+
+        // Optional: Integrate with GSAP's ticker if you're using GSAP animations
+        // This ensures GSAP animations are perfectly synchronized with Lenis's scroll
+        // gsap.ticker.add((time) => {
+        //     lenis.raf(time * 1000); // Lenis expects milliseconds
+        // });
+        // gsap.ticker.lagSmoothing(0); // Disable GSAP's lag smoothing if Lenis is handling it
+    
+
+
+
 
 // HOME
 // HOME
@@ -67,8 +97,6 @@ animateTextLines('.heading h4');
 
 
 
-
-
 gsap.from(".sec-video", {
     scale: 0.4,
     duration: 5,    
@@ -94,6 +122,7 @@ gsap.from(".sec-video", {
 // TEXT ANIMATION FUNCTION
 // TEXT ANIMATION FUNCTION
 // TEXT ANIMATION FUNCTION
+
 
 
         
@@ -273,6 +302,12 @@ gsap.from('.row img', {
 
 
 
+
+// CONTACT
+// CONTACT
+// CONTACT
+// CONTACT
+// CONTACT
 
 
 
