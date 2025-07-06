@@ -111,29 +111,17 @@ gsap.utils.toArray(".scroll-content img").forEach((img, i) => {
 
 
 
-
-const grid = document.querySelector('.grid');
-grid.innerHTML = Array(3).fill().map((_, row) => `
-    <div class="row">
-    ${Array(4).fill().map((_, col) => {
-      const num = row * 4 + col + 1;
-    return `<img src="assets/img-video/logos/logo${num}.png" alt="Logo ${num}">`;
-    }).join('')}
-    </div>
-`).join('');
-
-
 gsap.from('.row img', {
-  scale: 0,
-  duration: 0.8,
-  ease: 'back.out',
-  stagger: { each: 0.3, from: 'random' },
-  scrollTrigger: {
-    trigger: '.grid',
-    start: 'top 80%',
-    markers: true,
-  }
+    scale: 0,
+    duration: 0.6,
+    delay: .5,
+    ease: 'back.out',
+    stagger: { each: 0.3, from: 'random' },
+    scrollTrigger: {
+        trigger: '.grid',
+        start: 'top 80%',
+        markers: true,
+    }
 });
-
 
 

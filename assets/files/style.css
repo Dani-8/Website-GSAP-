@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: rgb(16, 16, 16);
 }
 .nav{
-    background-color: black;
+    /* background-color: black; */
     width: 100%;
     height: 80px;
     display: flex;
@@ -18,7 +21,7 @@ body{
 }
 
 .logo{
-    color: rgb(248, 220, 136);
+    color: rgb(231, 208, 177);
     font-size: 30px;
     padding: 30px;
 }
@@ -29,7 +32,7 @@ body{
 }
 
 .nav-links a{
-    color: rgb(248, 220, 136);
+    color: rgb(231, 208, 177);
     
     text-decoration: none;
     padding: 30px;
@@ -77,6 +80,7 @@ body{
 
 
 .big-heading h1{    
+    /* color: rgb(231, 208, 177); */
     color: rgb(248, 220, 136);
     font-size: 40vw;
     opacity: 0;
@@ -88,7 +92,7 @@ body{
 
 }
 .heading h4{
-    color: rgb(248, 220, 136);
+    color: rgb(231, 208, 177);
     font-size: 50px;
     font-weight: 400;
     text-align: center;
@@ -122,7 +126,7 @@ body{
     /* height: 100vh; */
     display: flex;
     flex-direction: column;
-    color: rgb(248, 220, 136);
+    color: rgb(231, 208, 177);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
     padding: 70px 0px;
@@ -188,7 +192,7 @@ body{
     width: 700px;
     height: 550px;
     margin: 30px 50px;
-    /* background-color: rgb(248, 220, 136); */
+    /* background-color: rgb(231, 208, 177); */
 
 }
 .card-video{
@@ -246,7 +250,7 @@ body{
     width: 100%;
     height: 10%;
     /* background-color: rgb(20, 18, 12); */
-    color: rgb(248, 220, 136);
+    color: rgb(231, 208, 177);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
     margin-top: 10px;
@@ -297,7 +301,7 @@ body{
 
 .last-thr-sec-text {
     position: relative;
-    color: rgb(248, 220, 136);
+    color: rgb(231, 208, 177);
     font-size: 20px;
     text-transform: uppercase;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -321,7 +325,7 @@ body{
     left: -5%;
     width: 380px;
     height: 140px;
-    border: 2px solid rgb(248, 220, 136);
+    border: 2px solid rgb(231, 208, 177);
     border-radius: 50%;
     z-index: 0; /* Behind text */
     transition: .2s linear;
@@ -419,19 +423,20 @@ body{
 .fifth{
     /* height: 100vh; */
     width: 100%;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 100px;
+    margin-bottom: 50px;
 
     /* background-color: rgb(184, 99, 245); */
     position: relative;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    flex-direction: column;
+    align-items: center;
 }
 
 .grid {
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     display: grid;
     gap: 200px;
     padding: 20px;
@@ -458,42 +463,157 @@ body{
 
 
 
+/* CONTACT */
+/* CONTACT */
+/* CONTACT */
+/* CONTACT */
+/* CONTACT */
+
+
+
+.contact{
+    width: 100%;
+    /* height: 800px; */
+    background-color: rgb(231, 208, 177);
+    text-align: center;
+    padding: 100px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.contact p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 5vw;
+    text-transform: uppercase;
+    line-height: 80px;
+    margin-top: 50px;
+}
+.contact span{
+    position: relative;
+    cursor: pointer;
+}
+.contact span::before{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    /* transform: scaleX(0%); */
+
+}
+.contact span:hover::before{
+    /* width: 0; */
+    animation: contact 2s ease;
+}
+
+@keyframes contact {
+    0%{
+        width: 0%;
+    }
+    30%{
+        width: 15%;
+
+    }
+    100%{
+        width: 100%;
+    }
+}
 
 
 
 
+.gif{
+    /* background-color: pink; */
+    width: 300px;
+    height: 300px;
+    position: relative;
+
+}
+
+.gif img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+}
+
+
+
+.projects{
+    /* background-color: lightblue; */
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 20px;
+}
+.projects P{
+    /* opacity: .5; */
+    color: rgb(231, 208, 177);
+    font-size: 7vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.projects p span{
+    opacity: .4;
+
+}
 
 
 
 
+/* FOOTER */
+/* FOOTER */
+/* FOOTER */
+/* FOOTER */
 
 
 
+.footer{
+    /* background-color: rgb(157, 62, 62); */
+    width: 100%;
+    height: 70px;
+    padding: 20px 30px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.footer ul{
+    /* background-color: rgb(186, 145, 145); */
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer ul a{
+    text-decoration: none;
+    color: inherit;
+}
+.footer ul li{
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.footer ul li span{
+    color: rgb(231, 208, 177);
+    letter-spacing: 5px;
+}
 
+.footer ul li:hover{
+    color: rgb(231, 208, 177);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
