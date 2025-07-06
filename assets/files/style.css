@@ -417,16 +417,42 @@ body{
 
 
 .fifth{
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     margin-top: 200px;
-    background-color: rgb(184, 99, 245);
+    margin-bottom: 200px;
+
+    /* background-color: rgb(184, 99, 245); */
     position: relative;
     display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.grid {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    gap: 200px;
+    padding: 20px;
+    width: 80%;
 
 }
 
+.row {
+    /* background-color: rgb(24, 180, 24); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
 
+.row img {
+    /* background-color: rgb(23, 73, 23); */
+  width: 130px;
+  height: 50px;
+  /* object-fit: cover; */
+}
 
 
 
