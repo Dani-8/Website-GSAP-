@@ -79,8 +79,8 @@ body{
 }
 
 .loader-logo {
-    width: 200px; /* Size of individual logos */
-    height: 200px;
+    width: 220px; /* Size of individual logos */
+    height: 220px;
     object-fit: contain;
     position: absolute;
     /* background-color: aqua; */

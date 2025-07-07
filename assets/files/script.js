@@ -154,15 +154,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Loop through each logo to create sequential appear/disappear animations
     loaderLogos.forEach((logo, index) => {
         loaderTl.fromTo(logo, // Animate logo in
-            { opacity: 0, scale: 0.5 },
-            { opacity: 1, scale: 1, duration: 0.3, ease: "back.out" }
+            { opacity: 0, scale: 0.2 },
+            { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }
         )
         .to(logo, { // Animate logo out
             opacity: 0,
             scale: .2,
-            duration: 0.1,
+            duration: 0.0001,
             ease: "power1.in"
-        }, "-=0"); // Wait 0.2 seconds after appearing before disappearing
+        }); // Wait 0.2 seconds after appearing before disappearing
     });
 
 
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 stagger: { each: 0.1, from: 'center' },
 
                 ease: "power2.inOut"
-            }, "+=0.2") // Start bars animation 0.2 seconds *after* welcome message finishes fading out
+            }, "-=0.3") // Start bars animation 0.2 seconds *after* welcome message finishes fading out
         .to(loaderOverlay, { // Fade out the entire overlay (to reveal content)
             // opacity: 0,
             duration: 0.5, // Duration for overlay fade out
