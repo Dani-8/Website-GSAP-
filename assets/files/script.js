@@ -43,16 +43,19 @@ var tlNavbar = gsap.timeline()
 var navLogo = document.querySelector(".logo h1")
 var navLinks = document.querySelectorAll(".nav-links li")
 
+gsap.set(navLogo, {opacity: 0, y: -100, })
+gsap.set(navLinks, {opacity: 0, scale: 0, })
 
-tlNavbar.from(navLogo, {
-    y: -100,
-    opacity: 0,
+
+tlNavbar.to(navLogo, {
+    y: 0,
+    opacity: 1,
     duration: 1.4,
     ease: "back.out"
 
 })
-tlNavbar.from(navLinks, {
-    scale: 0,
+tlNavbar.to(navLinks, {
+    scale: 1,
     opacity: 1,
     duration: 1,
     stagger: 0.2,
