@@ -23,9 +23,49 @@ document.addEventListener("mousemove", function(dets){
         duration:0.8,
         ease: "back.out"
         
-
     })
 })
+
+
+
+
+
+// NAVBAR
+// NAVBAR
+// NAVBAR
+// NAVBAR
+// NAVBAR
+// NAVBAR
+
+
+var tlNavbar = gsap.timeline()
+
+var navLogo = document.querySelector(".logo h1")
+var navLinks = document.querySelectorAll(".nav-links li")
+
+
+tlNavbar.from(navLogo, {
+    y: -100,
+    opacity: 0,
+    duration: 1.4,
+    ease: "back.out"
+
+})
+tlNavbar.from(navLinks, {
+    scale: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    ease: "back.out(1.5)"
+    
+}, "-=.5")
+
+
+
+
+
+
+
 
 
 
@@ -84,7 +124,7 @@ let split = SplitText.create("#heading", { type: "chars" });
 //now animate each character into place from 20px below, fading in:
 gsap.from(split.chars, {
     duration: 1,
-    delay: 1,
+    delay: 1.8,
     y: 50,
     autoAlpha: 0,
     stagger: { each: 0.2, from: 'random' },
