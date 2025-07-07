@@ -1,35 +1,63 @@
-var cursor = document.querySelector(".cursor")
-var card = document.querySelector(".card")
+// Select elements once
+const cursor = document.querySelector(".cursor");
+const card = gsap.utils.toArray('.card');
+const cardMediaElements = document.querySelectorAll(".card-img, .card-video");
 
+let mouseX = 0;
+let mouseY = 0;
 
-document.addEventListener("mousemove", function(dets){
-    let scale = 1
-    let opacity = 0
+// Function to update cursor position and appearance based on hover
+function updateCursor() {
+    let isOverMedia = false;
+    cardMediaElements.forEach(mediaElement => {
+        const rect = mediaElement.getBoundingClientRect();
+        if (
+            mouseX >= rect.left && mouseX <= rect.right &&
+            mouseY >= rect.top && mouseY <= rect.bottom
+        ) {
+            isOverMedia = true;
+        }
+    });
 
-    if (dets.target.closest(".card-img, .card-video")){
-        opacity = 1
-        scale = 3
-        cursor.innerHTML = '<i class="ri-arrow-right-line"></i>'
-    } else{
-        cursor.innerHTML = ""
-    }
-
-
+    // Animate cursor properties
     gsap.to(cursor, {
-        x:dets.x,
-        y:dets.y,
-        scale: scale,
-        opacity: opacity,
-        duration:0.8,
-        ease: "back.out"
-        
-    })
-})
+        x: mouseX,
+        y: mouseY,
+        scale: isOverMedia ? 3 : 0, // Scale to 3 if over media, 0 if not
+        opacity: isOverMedia ? 1 : 0, // Opacity to 1 if over media, 0 if not
+        duration: isOverMedia ? 0.8 : 0.8, // Duration for scale/opacity change
+        ease: isOverMedia ? "back.out" : "power2.out"
+    });
+
+    // Update icon visibility
+    cursor.innerHTML = isOverMedia ? '<i class="ri-arrow-right-line"></i>' : '';
+}
+
+// Event listeners
+document.addEventListener("mousemove", (dets) => {
+    mouseX = dets.clientX;
+    mouseY = dets.clientY;
+    updateCursor(); // Call on mouse move
+});
+
+// ScrollTrigger to continuously update cursor state during scroll
+ScrollTrigger.create({
+    trigger: "body",
+    start: "top top",
+    end: "bottom bottom",
+    onUpdate: updateCursor, // Call on every scroll frame
+});
 
 
 
 
 
+
+
+
+
+// Moved inside the loader's onComplete to ensure it runs AFTER loader
+function initializeMainContentAnimations() {
 // NAVBAR
 // NAVBAR
 // NAVBAR
@@ -50,7 +78,7 @@ gsap.set(navLinks, {opacity: 0, scale: 0, })
 tlNavbar.to(navLogo, {
     y: 0,
     opacity: 1,
-    duration: 1.4,
+    duration: 1,
     ease: "back.out"
 
 })
@@ -62,6 +90,100 @@ tlNavbar.to(navLinks, {
     ease: "back.out(1.5)"
     
 }, "-=.5")
+
+
+
+
+
+
+
+// HOME
+// HOME
+// HOME
+// HOME
+// HOME
+// HOME
+// HOME
+// HOME
+
+
+
+
+gsap.registerPlugin(SplitText);
+
+gsap.set("#heading", { opacity: 1});
+
+let split = SplitText.create("#heading", { type: "chars" });
+//now animate each character into place from 20px below, fading in:
+gsap.from(split.chars, {
+    duration: 1,
+    delay: 1.8,
+    y: 50,
+    autoAlpha: 0,
+    stagger: { each: 0.2, from: 'random' },
+});
+
+
+
+
+}
+
+
+
+
+
+// --- LOADER ANIMATION ---
+document.addEventListener("DOMContentLoaded", () => {
+    const loaderOverlay = document.querySelector(".loader-overlay");
+    const loaderBars = document.querySelectorAll(".loader-bar");
+    const loaderLogos = document.querySelectorAll(".loader-logo"); // Select the new logo elements
+
+    const loaderTl = gsap.timeline({
+        onComplete: () => {
+            // Once loader animation is complete, hide the overlay
+            gsap.set(loaderOverlay, { display: "none" });
+            // IMPORTANT: Initialize main content animations ONLY AFTER loader is done
+            initializeMainContentAnimations();
+        }
+});
+
+    // Sequence: Logos appear one by one -> Logos disappear one by one -> Bars shrink -> Overlay fades
+    loaderTl
+        .to(loaderOverlay, { opacity: 1, duration: 0.1 }); // Ensure overlay is fully opaque
+
+    // Loop through each logo to create sequential appear/disappear animations
+    loaderLogos.forEach((logo, index) => {
+        loaderTl.fromTo(logo, // Animate logo in
+            { opacity: 0, scale: 0.5 },
+            { opacity: 1, scale: 1, duration: 0.3, ease: "back.out" }
+        )
+        .to(logo, { // Animate logo out
+            opacity: 0,
+            scale: .2,
+            duration: 0.1,
+            ease: "power1.in"
+        }, "-=0"); // Wait 0.2 seconds after appearing before disappearing
+    });
+
+
+        loaderTl.fromTo(loaderBars, // Animate bars to shrink from 100% height to 0%
+            { scaleY: 1 }, // Start with full height (scaleY 1)
+            {
+                scaleY: 0, // Shrink to 0 height
+                // stagger: 0.1, // Stagger each bar's animation
+                duration: 0.8,
+                stagger: { each: 0.1, from: 'center' },
+
+                ease: "power2.inOut"
+            }, "+=0.2") // Start bars animation 0.2 seconds *after* welcome message finishes fading out
+        .to(loaderOverlay, { // Fade out the entire overlay (to reveal content)
+            // opacity: 0,
+            duration: 0.5, // Duration for overlay fade out
+            ease: "power2.out"
+        }, "<0.3"); // Start overlay fade 0.3 seconds *before* the bars finish moving up (overlap for smoothness)
+});
+
+
 
 
 
@@ -111,27 +233,7 @@ tlNavbar.to(navLinks, {
 // HOME
 // HOME
 // HOME
-// HOME
-// HOME
 
-
-
-
-
-
-gsap.registerPlugin(SplitText);
-
-gsap.set("#heading", { opacity: 1});
-
-let split = SplitText.create("#heading", { type: "chars" });
-//now animate each character into place from 20px below, fading in:
-gsap.from(split.chars, {
-    duration: 1,
-    delay: 1.8,
-    y: 50,
-    autoAlpha: 0,
-    stagger: { each: 0.2, from: 'random' },
-});
 
 
 

@@ -39,6 +39,70 @@ body{
 
 
 
+
+/* LOADER STYLES */
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row; /* Changed to row for vertical bars */
+    z-index: 99999; /* Ensure it's on top */
+    overflow: hidden; /* Hide anything outside the bars */
+    justify-content: center; /* Center welcome message */
+    align-items: center;
+    /* background-color: #0d1b2a; Ensure a solid background for the overlay */
+}
+
+.loader-bar {
+    height: 100%; /* Changed to 100% height */
+    width: 20%; /* 5 bars, each 20% width = 100% */
+    background-color: rgb(231, 208, 177); /* Prominent accent color */
+    transform-origin: top; /* For scaleY animation */
+}
+/* Alternate bar colors for visual effect */
+.loader-bar:nth-child(even) {
+    background-color: rgb(231, 208, 177); /* Prominent accent color */
+}
+
+.logo-container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap; /* Allow logos to wrap */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between logos */
+    max-width: 80%; /* Limit container width */
+    z-index: 100000; /* Above bars */
+}
+
+.loader-logo {
+    width: 200px; /* Size of individual logos */
+    height: 200px;
+    object-fit: contain;
+    position: absolute;
+    /* background-color: aqua; */
+    opacity: 0;
+    transform: scale(0.5); /* Start smaller */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .nav{
     /* background-color: black; */
     width: 100%;
@@ -244,7 +308,7 @@ body{
 
 .card{
     width: 700px;
-    height: 550px;
+    height: fit-content;
     margin: 30px 50px;
     overflow: hidden;
     /* background-color: rgb(171, 122, 204); */
@@ -303,16 +367,17 @@ body{
 
 .card-text{
     width: 100%;
-    height: 10%;
-    /* background-color: rgb(20, 18, 12); */
+    /* height: 10%; */
+    /* background-color: rgb(158, 150, 126); */
     color: rgb(231, 208, 177);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: self-start;
+    gap: 2px;
 }
 
 
@@ -322,7 +387,7 @@ body{
 
 .card2{
     width: 500px;
-    height: 350px;
+    /* height: 350px; */
     margin: 30px 50px;
     margin-top: 15%;
 }
@@ -330,7 +395,7 @@ body{
 
 .card3{
     width: 450px;
-    height: 450px;
+    /* height: 450px; */
     margin: 30px 50px;
     /* margin-top: 20%; */
 }
@@ -338,14 +403,14 @@ body{
 
 .card4{
     width: 750px;
-    height: 700px;
+    /* height: 700px; */
     margin: 30px 50px;
     margin-top: 15%;
 }
 
 .card5{
     width: 900px;
-    height: 900px;
+    /* height: 800px; */
     margin: 0 auto;
 
 }
