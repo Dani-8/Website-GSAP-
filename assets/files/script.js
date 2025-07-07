@@ -25,8 +25,9 @@ function updateCursor() {
         y: mouseY,
         scale: isOverMedia ? 3 : 0, // Scale to 3 if over media, 0 if not
         opacity: isOverMedia ? 1 : 0, // Opacity to 1 if over media, 0 if not
-        duration: isOverMedia ? 0.8 : 0.8, // Duration for scale/opacity change
-        ease: isOverMedia ? "back.out" : "power2.out"
+        duration: isOverMedia ? 1 : 1, // Duration for scale/opacity change
+        ease: isOverMedia ? "back.out(3)" : "back.out(3)",
+        // scrub: 1,
     });
 
     // Update icon visibility
@@ -47,6 +48,7 @@ ScrollTrigger.create({
     end: "bottom bottom",
     onUpdate: updateCursor, // Call on every scroll frame
 });
+
 
 
 
@@ -78,6 +80,7 @@ gsap.set(navLinks, {opacity: 0, scale: 0, })
 tlNavbar.to(navLogo, {
     y: 0,
     opacity: 1,
+    delay: 1,
     duration: 1,
     ease: "back.out"
 
@@ -116,9 +119,9 @@ gsap.set("#heading", { opacity: 1});
 let split = SplitText.create("#heading", { type: "chars" });
 //now animate each character into place from 20px below, fading in:
 gsap.from(split.chars, {
-    duration: 1,
-    delay: 1.8,
-    y: 50,
+    duration: .5,
+    delay: -0.2,
+    y: 70,
     autoAlpha: 0,
     stagger: { each: 0.2, from: 'random' },
 });

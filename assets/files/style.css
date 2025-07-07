@@ -9,6 +9,27 @@ body{
     overflow-x: hidden;
     background-color: rgb(16, 16, 16);
 }
+::-webkit-scrollbar {
+    width: 8px;   
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(35, 35, 35);
+    border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2e2e2e;
+}
+
+
 .cursor {
     z-index: 1000;
     opacity: 0;
@@ -53,7 +74,7 @@ body{
     overflow: hidden; /* Hide anything outside the bars */
     justify-content: center; /* Center welcome message */
     align-items: center;
-    /* background-color: #0d1b2a; Ensure a solid background for the overlay */
+    /* background-color: #2c5785;  */
 }
 
 .loader-bar {
@@ -186,31 +207,34 @@ body{
     display: flex;
     justify-content: center;
     overflow: hidden;
+    position: relative;
 }
 
 
 
 .big-heading h1{    
+    position: absolute;
+    bottom: 30px;
     /* color: rgb(231, 208, 177); */
-    color: rgb(228, 208, 147);
+    color: rgb(243, 199, 124);
     font-size: 40vw;
-    overflow: hidden;
+    /* font-weight: 900; */
+    /* overflow: hidden; */
     opacity: 0;
-    transform: scaleY(1);
-    /* letter-spacing: -20px; */
-    /* background-color: lightblue; */
+    transform: scale(1.15, 1);
+    letter-spacing: -35px;
+    /* background-color: lightseagreen; */
     text-align: center;
-    font-family: 'NCL Broesq', sans-serif;
-    font-family: 'JunebugStompNF', sans-serif;
     font-family: 'Sifonn', sans-serif;                                            
 
 }
 .heading h4{
-    color: rgb(231, 208, 177);
+    color: rgb(243, 199, 124);
     /* overflow: hidden; */
     /* background-color: red; */
-    font-size: 50px;
-    font-weight: 500;
+    font-size: 45px;    
+    font-weight: 300;
+    line-height: 50px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
