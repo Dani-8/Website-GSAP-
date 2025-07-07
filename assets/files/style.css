@@ -64,6 +64,9 @@ body{
     align-items: center;
     overflow: hidden;
 }
+.logo h1{
+    opacity: 0;
+}
 
 .nav-links{
     display: flex;
@@ -72,6 +75,7 @@ body{
     margin-right: 20px;
 }
 .nav-links li{
+    opacity: 0;
     padding: 30px;
     /* background-color: red; */
 }
