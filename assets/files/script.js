@@ -120,8 +120,8 @@ let split = SplitText.create("#heading", { type: "chars" });
 //now animate each character into place from 20px below, fading in:
 gsap.from(split.chars, {
     duration: .5,
-    delay: -0.2,
-    y: 70,
+    delay: -0.1,
+    y: 80,
     autoAlpha: 0,
     stagger: { each: 0.2, from: 'random' },
 });
@@ -152,13 +152,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Sequence: Logos appear one by one -> Logos disappear one by one -> Bars shrink -> Overlay fades
     loaderTl
-        .to(loaderOverlay, { opacity: 1, duration: 0.1 }); // Ensure overlay is fully opaque
+        .to(loaderOverlay, { opacity: 1, duration: .1 }); // Ensure overlay is fully opaque
 
     // Loop through each logo to create sequential appear/disappear animations
     loaderLogos.forEach((logo, index) => {
         loaderTl.fromTo(logo, // Animate logo in
             { opacity: 0, scale: 0.2 },
-            { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }
+            { opacity: 1, scale: 1, duration: 0.22, ease: "back.out(2)" }
         )
         .to(logo, { // Animate logo out
             opacity: 0,
