@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loaderLogos.forEach((logo, index) => {
         loaderTl.fromTo(logo, // Animate logo in
             { opacity: 0, scale: 0.2 },
-            { opacity: 1, scale: 1, duration: 0.22, ease: "back.out(2)" }
+            { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2)" }
         )
         .to(logo, { // Animate logo out
             opacity: 0,
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 scaleY: 0, // Shrink to 0 height
                 // stagger: 0.1, // Stagger each bar's animation
                 duration: 0.8,
-                stagger: { each: 0.05, from: 'center' },
+                stagger: { each: 0.04, from: 'center' },
 
                 ease: "power2.inOut"
             }, "-=0.3") // Start bars animation 0.2 seconds *after* welcome message finishes fading out
