@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 scaleY: 0, // Shrink to 0 height
                 // stagger: 0.1, // Stagger each bar's animation
                 duration: 0.8,
-                stagger: { each: 0.1, from: 'center' },
+                stagger: { each: 0.05, from: 'center' },
 
                 ease: "power2.inOut"
             }, "-=0.3") // Start bars animation 0.2 seconds *after* welcome message finishes fading out
